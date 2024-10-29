@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:26:13 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 15:40:08 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/10/29 15:41:45 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,5 +128,12 @@ Brain::Brain(const Brain &copy){
 Brain &Brain::operator=(const Brain &src) {
 	std::cout << "Brain copy assignment constructor called\n";
 	// copy the 100 ideas from src to this brain
+	int	i = 0;
+
+	while (i < 100)
+	{
+		this->ideas[i] = src.ideas[i];
+		i++;
+	}
 	return (*this);
 }
