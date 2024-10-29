@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cat.hpp                                            :+:      :+:    :+:   */
+/*   wrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 03:32:36 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 13:50:37 by gyong-si         ###   ########.fr       */
+/*   Created: 2024/10/29 14:01:44 by gyong-si          #+#    #+#             */
+/*   Updated: 2024/10/29 14:02:35 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONG_CAT_HPP
+#define WRONG_CAT_HPP
 
-#include "animal.hpp"
+#include "wrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
 	private:
 		std::string _type;
 
 	public:
 		// constructor
-		Cat();
+		WrongCat();
 		// deconstructor
-		~Cat();
+		~WrongCat();
 		// copy constructor
-		Cat(const Cat &copy);
+		WrongCat(const WrongCat &copy);
 		// copy assignment operator
-		Cat &operator=(const Cat &src);
+		WrongCat &operator=(const WrongCat &src);
 		// public methods
 		virtual void makeSound() const;
 };

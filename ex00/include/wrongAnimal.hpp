@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cat.hpp                                            :+:      :+:    :+:   */
+/*   wrongClass.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 03:32:36 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 13:50:37 by gyong-si         ###   ########.fr       */
+/*   Created: 2024/10/29 13:56:55 by gyong-si          #+#    #+#             */
+/*   Updated: 2024/10/29 13:59:24 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONG_ANIMAL_HPP
+# define WRONG_ANIMAL_HPP
 
-#include "animal.hpp"
+#include <iostream>
+#include <string>
 
-class Cat : public Animal
+
+class WrongAnimal
 {
-	private:
+	protected:
 		std::string _type;
 
 	public:
 		// constructor
-		Cat();
+		WrongAnimal();
+		WrongAnimal(const std::string type);
+		WrongAnimal(const WrongAnimal &copy);
 		// deconstructor
-		~Cat();
-		// copy constructor
-		Cat(const Cat &copy);
-		// copy assignment operator
-		Cat &operator=(const Cat &src);
-		// public methods
+		virtual ~WrongAnimal(void);
+		// overload operator
+		WrongAnimal &operator=(const WrongAnimal &src);
+		// public method
 		virtual void makeSound() const;
+		// getter
+		std::string getType(void) const;
 };
 
 #endif
