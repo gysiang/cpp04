@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
+/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:26:13 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 15:41:45 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:49:36 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,4 +136,18 @@ Brain &Brain::operator=(const Brain &src) {
 		i++;
 	}
 	return (*this);
+}
+
+const std::string Brain::getIdea(int i) const {
+	if (i < 100)
+		return (this->ideas[i]);
+	else
+		return ("This idea is out of valid range.");
+}
+
+void	Brain::setIdea(int i, std::string idea) {
+	if (i < 100)
+		this->ideas[i] = idea;
+	else
+		std::cout << "Failed to set idea. This index is outside the valid range." << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
+/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:24:32 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 13:30:17 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/02 15:37:09 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 #include <iostream>
 #include <string>
-
+#include <cstdlib>
+#include <cstdio>
 
 class Animal
 {
