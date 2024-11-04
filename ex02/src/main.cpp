@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:16:01 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/04 15:03:24 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:58:56 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 
 int	main()
 {
+	/** *
+	const Animal *animal = new Animal();
+	animal->makeSound();
+	**/
+
 	const	Animal *array[10];
 	int		i = 0;
 
