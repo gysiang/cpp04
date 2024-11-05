@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:32:36 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 13:50:37 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:21:40 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cat : public Animal
 		// constructor
 		Cat();
 		// deconstructor
-		~Cat();
+		virtual ~Cat();
 		// copy constructor
 		Cat(const Cat &copy);
 		// copy assignment operator

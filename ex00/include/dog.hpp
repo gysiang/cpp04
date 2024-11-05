@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:32:20 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 13:50:27 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:21:45 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog : public Animal
 		// constructor
 		Dog();
 		// deconstructor
-		~Dog();
+		virtual ~Dog();
 		// copy constructor
 		Dog(const Dog &copy);
 		// copy assignment operator

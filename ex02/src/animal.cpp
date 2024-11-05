@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:25:00 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 15:25:18 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:53:21 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ Animal &Animal::operator=(const Animal &src) {
 	}
 	return (*this);
 }
-
+/** *
 void Animal::makeSound(void) const {
 	std::cout << "This animal does not make a sound yet." << std::endl;
-}
+} **/
 
 std::string Animal::getType() const {
 	return (this->_type);

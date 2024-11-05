@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:16:01 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/04 15:03:24 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:49:15 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int	main()
 	{
 		array[i++]->makeSound();
 	}
+	std::cout << std::endl;
 	i = 0;
 	while (i < 10)
 	{
@@ -76,7 +77,9 @@ int	main()
 	a->getIdeas();
 	std::cout << "Idea from B" << std::endl;
 	b->getIdeas();
+	std::cout << std::endl;
 
 	delete(a);
 	delete(b);
+	return (0);
 }

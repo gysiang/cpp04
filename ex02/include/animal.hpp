@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:24:32 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/04 15:53:47 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:53:44 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ class Animal
 {
 	protected:
 		std::string _type;
-		Animal();
-		Animal(const std::string type);
 
 	public:
 		// constructor
+		Animal();
+		Animal(const std::string type);
 		Animal(const Animal &copy);
 		// deconstructor
 		virtual ~Animal(void);
 		// overload operator
 		Animal &operator=(const Animal &src);
 		// public method
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0;
 		// getter
 		std::string getType(void) const;
 };
