@@ -6,11 +6,11 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:02:56 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 14:04:30 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:37:37 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wrongCat.hpp"
+#include "../include/wrongCat.hpp"
 
 WrongCat::WrongCat() : WrongAnimal("WrongCat") {
 	std::cout << "WrongCat default constructor initialised" << std::endl;

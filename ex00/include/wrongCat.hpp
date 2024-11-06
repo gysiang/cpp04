@@ -6,14 +6,14 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:01:44 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/05 14:21:56 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:40:13 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONG_CAT_HPP
 #define WRONG_CAT_HPP
 
-#include "wrongAnimal.hpp"
+#include "../include/wrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal
 {
@@ -30,7 +30,7 @@ class WrongCat : public WrongAnimal
 		// copy assignment operator
 		WrongCat &operator=(const WrongCat &src);
 		// public methods
-		virtual void makeSound() const;
+		void makeSound() const;
 };
 
 #endif

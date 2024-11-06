@@ -6,11 +6,11 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:26:40 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 15:29:54 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:37:11 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dog.hpp"
+#include "../include/dog.hpp"
 
 Dog::Dog() : Animal("Dog") {
 	std::cout << "Dog default constructor initialised" << std::endl;

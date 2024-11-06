@@ -6,14 +6,14 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:32:36 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/05 14:21:40 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:37:57 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include "animal.hpp"
+#include "../include/animal.hpp"
 
 class Cat : public Animal
 {

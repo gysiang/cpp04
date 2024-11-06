@@ -6,15 +6,15 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:47:23 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/05 14:29:12 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:39:31 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
-#include "cat.hpp"
-#include "dog.hpp"
-#include "wrongAnimal.hpp"
-#include "wrongCat.hpp"
+#include "../include/animal.hpp"
+#include "../include/cat.hpp"
+#include "../include/dog.hpp"
+#include "../include/wrongAnimal.hpp"
+#include "../include/wrongCat.hpp"
 
 int	main()
 {

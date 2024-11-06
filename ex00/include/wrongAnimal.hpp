@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrongClass.hpp                                     :+:      :+:    :+:   */
+/*   wrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:56:55 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 13:59:24 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:40:44 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class WrongAnimal
 		// overload operator
 		WrongAnimal &operator=(const WrongAnimal &src);
 		// public method
-		virtual void makeSound() const;
+		void makeSound() const;
 		// getter
 		std::string getType(void) const;
 };

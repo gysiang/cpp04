@@ -6,11 +6,11 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:25:00 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/05 14:28:17 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:36:47 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+#include "../include/animal.hpp"
 
 Animal::Animal() : _type("default") {
 	std::cout << "Animal default constructor initalised" << std::endl;

@@ -6,14 +6,14 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:32:20 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/05 14:21:45 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:38:08 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "animal.hpp"
+#include "../include/animal.hpp"
 
 class Dog : public Animal
 {

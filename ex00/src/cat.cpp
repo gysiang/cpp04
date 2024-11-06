@@ -6,11 +6,11 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:36:05 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 13:51:11 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:37:02 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cat.hpp"
+#include "../include/cat.hpp"
 
 Cat::Cat() : Animal("Cat") {
 	std::cout << "Cat default constructor initialised" << std::endl;

@@ -6,11 +6,11 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:57:35 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/10/29 14:06:10 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:37:22 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wrongAnimal.hpp"
+#include "../include/wrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(void) : _type("default") {
 	std::cout << "WrongAnimal default constructor initalised" << std::endl;
