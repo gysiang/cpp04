@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:57:35 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/06 15:37:22 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:11:35 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ WrongAnimal::~WrongAnimal(void) {
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &src) {
 	std::cout << "Animal copy assignment operator called" << std::endl;
-	if (this != &src)
-	{
+	if (this != &src) {
 		this->_type = src._type;
 	}
 	return (*this);

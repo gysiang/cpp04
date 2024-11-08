@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:26:40 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/06 15:37:11 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:11:25 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ Dog::Dog(const Dog &copy): Animal(copy) {
 }
 
 Dog &Dog::operator=(const Dog &src) {
-	std::cout << "Dog Assignation operator called" << std::endl;
-	this->_type = src._type;
+	if (this != &src) {
+		std::cout << "Dog Assignation operator called" << std::endl;
+		this->_type = src._type;
+	}
 	return (*this);
 }
 

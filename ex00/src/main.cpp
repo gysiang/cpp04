@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:47:23 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/06 15:39:31 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:35:03 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	main()
 
 	std::cout <<"\033[1;33m------------------ For Animal Class ---------------\033[0m" << std::endl;
 	std::cout << j->getType() << " : ";
-	i->makeSound();
-	std::cout << i->getType() << " : ";
 	j->makeSound();
+	std::cout << i->getType() << " : ";
+	i->makeSound();
 	std::cout << meta->getType() << " : ";
 	meta->makeSound();
 	std::cout << std::endl;

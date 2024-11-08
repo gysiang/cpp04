@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:36:05 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/06 15:37:02 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:11:13 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ Cat::Cat(const Cat &copy): Animal(copy) {
 }
 
 Cat &Cat::operator=(const Cat &src) {
-	std::cout << "Cat Assignation operator called" << std::endl;
-	this->_type = src._type;
+	if (this != &src) {
+		std::cout << "Cat Assignation operator called" << std::endl;
+		this->_type = src._type;
+	}
 	return (*this);
 }
 

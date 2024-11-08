@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:02:56 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/06 15:37:37 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:11:56 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ WrongCat::WrongCat(const WrongCat &copy): WrongAnimal(copy) {
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &src) {
-	std::cout << "WrongCat Assignation operator called" << std::endl;
-	this->_type = src._type;
+	if (this != &src) {
+		std::cout << "WrongCat Assignation operator called" << std::endl;
+		this->_type = src._type;
+	}
 	return (*this);
 }
 

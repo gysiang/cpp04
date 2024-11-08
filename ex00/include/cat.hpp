@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 03:32:36 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/06 15:37:57 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:34:17 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Cat : public Animal
 		// copy assignment operator
 		Cat &operator=(const Cat &src);
 		// public methods
-		virtual void makeSound() const;
+		void makeSound() const;
 };
 
 #endif
