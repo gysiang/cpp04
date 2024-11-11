@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:38:49 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 14:48:07 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:28:45 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../include/AMateria.hpp"
 
 MateriaSource::MateriaSource() {
-	int	i = slots;
+	int	i = 0;
 	while (i < slots) {
 		inventory[i] = NULL;
 		i++;
@@ -26,7 +26,8 @@ MateriaSource::~MateriaSource() {
 	int i = 0;
 	while (i < slots) {
 		if (inventory[i])
-			delete (inventory[i]);
+			delete inventory[i];
+		i++;
 	}
 	std::cout << "Materia Source was destroyed." << std::endl;
 }

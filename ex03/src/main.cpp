@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:47:33 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 15:24:21 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:21:01 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,6 @@ int	main() {
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
-	ICharacter *bob = new Character("bob");
-	me->use(0, *bob);
-	me->use(0, *bob);
-
-	delete bob;
 	delete me;
 	delete src;
 
