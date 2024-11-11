@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:26:46 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 12:13:44 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:11:38 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cure::~Cure() {
 	std::cout << "Cure AMateria destroyed" << std::endl;
 }
 
-Cure:: Cure(const Cure &copy) : type(copy.getType()) {
+Cure:: Cure(const Cure &copy) : AMateria(copy) {
 	std::cout << "Cure Copy Operator called." << std::endl;
 }
 

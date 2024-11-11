@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:26:51 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 12:12:43 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:11:46 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ std::string const &Ice::getType	() const {
 	return (type);
 }
 
-Ice::Ice(Ice const &copy) : type(copy.getType()) {
+Ice::Ice(Ice const &copy) : AMateria(copy) {
 	std::cout << type << " constructed from copy\n";
 }
 
