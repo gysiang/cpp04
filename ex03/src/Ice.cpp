@@ -3,20 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
+/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:26:51 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/08 15:38:50 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:12:43 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "../include/Ice.hpp"
+#include "../include/ICharacter.hpp"
 
 // default constructor
 Ice::Ice() : AMateria("ice") {
-	std::cout << "Ice AMateria created" << std::endl;
+	std::cout << "Ice AMateria created\n" << std::endl;
 }
 
 Ice::~Ice() {
-	std::cout << "Ice AMateria destroyed" << std::endl;
+	std::cout << "Ice AMateria destroyed\n" << std::endl;
+}
+
+std::string const &Ice::getType	() const {
+	return (type);
+}
+
+Ice::Ice(Ice const &copy) : type(copy.getType()) {
+	std::cout << type << " constructed from copy\n";
+}
+
+Ice &Ice::operator=(const Ice &src) {
+	if (this == &src)
+		return (*this);
+	std::cout << "Copy Assignment Operator from " << src.getType() << std::endl;
+	return (*this);
+}
+
+Ice *Ice::clone() const {
+	return (new Ice(*this));
+}
+
+void Ice::use(ICharacter &target) {
+	std::cout << target.getName() << " heals its wounds."<< std::endl;
 }

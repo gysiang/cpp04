@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
+/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:01:41 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/08 15:49:52 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/10 13:22:50 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,11 @@
 class ICharacter
 {
 	public:
-		const static int slots = 4;
 		virtual ~ICharacter() {};
 		virtual std::string const &getName() const = 0;
-		virtual equip(AMateria *m) = 0;
-		virtual unequip(int idx) = 0;
+		virtual void equip(AMateria *m) = 0;
+		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter &target) = 0;
-
-	protected:
-		std::string name;
-		std::string inventory[slots];
 };
 
 #endif
