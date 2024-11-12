@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:26:46 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 15:11:38 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:40:21 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Cure *Cure::clone() const {
 }
 
 void Cure::use(ICharacter &target) {
-	std::cout << target.getName() << " heals its wounds."<< std::endl;
+	std::cout << "heals " << target.getName() << "'s wounds."<<std::endl;
 }
 
 std::string const &Cure::getType() const {

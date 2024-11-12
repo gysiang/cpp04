@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:38:49 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 16:28:45 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:48:14 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,20 @@ MateriaSource &MateriaSource::operator=(MateriaSource const &src) {
 }
 
 void MateriaSource::learnMateria(AMateria* m) {
-	int	i = 0;
-
-	while (inventory[i] != NULL && i < slots) {
-		i++;
-	}
-	if (i >=4) {
-		std::cout << "Exceed the limit of 4 Materia." << std::endl;
+	if (!m) {
+		std::cout << "cannot learn null materia" << std::endl;
 		return ;
 	}
-	inventory[i] = m;
-	std::cout << "Materia " << m->getType() << " learned." << std::endl;
+	int	i = 0;
+	while (i < slots) {
+		if (!inventory[i]) {
+			inventory[i] = m->clone();
+			std::cout << "Learn Materia: " << m->getType() << std::endl;
+			return ;
+		}
+		i++;
+	}
+	std::cout << "No more slots left to learn new Materia" << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const &type) {
@@ -76,6 +79,6 @@ AMateria* MateriaSource::createMateria(std::string const &type) {
 		}
 		i++;
 	}
-	std::cout << "Sorry. Materia is not found." << std::endl;
+	std::cout << "Sorry. " << type << " Materia is not found." << std::endl;
 	return (NULL);
 }

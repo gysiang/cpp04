@@ -6,7 +6,7 @@
 /*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:26:51 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 15:11:46 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:15:07 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ Ice *Ice::clone() const {
 }
 
 void Ice::use(ICharacter &target) {
-	std::cout << target.getName() << " heals its wounds."<< std::endl;
+	std::cout << "shoots an ice bolt at " << target.getName() << std::endl;
 }
