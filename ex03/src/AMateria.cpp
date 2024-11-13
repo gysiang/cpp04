@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:07:00 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 15:23:42 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:57:23 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 AMateria::AMateria() : type("default") {};
 
-AMateria::AMateria(std::string const &type) {
+AMateria::AMateria(std::string const &type) : type(type) {
 	std::cout << "AMateria " << type << " is created." << std::endl;
-	this->type = type;
 }
 
 AMateria::~AMateria() {
@@ -37,7 +36,7 @@ AMateria &AMateria::operator=(AMateria const &src) {
 std::string const &AMateria::getType() const {
 	return (this->type);
 }
-
+/** *
 void AMateria::use(ICharacter &target) {
 	std::cout << "AMateria use aginst" << target.getName() << std::endl;
-}
+} **/

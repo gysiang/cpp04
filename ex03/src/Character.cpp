@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 13:30:04 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/12 18:08:56 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:11:00 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,40 +17,31 @@ Character::Character(std::string const name) : name(name) {
 	int	i = 0;
 	while (i < slots) {
 		inventory[i] = NULL;
-		floor[i] = NULL;
 		i++;
 	}
 };
 
 Character::~Character() {
-	// destroy all the memory allocated for the inventory and floor
-	for (int i = 0; i < slots; ++i) {
-		if (inventory[i]) {
+	int	i = 0;
+	while (i < slots) {
+		if (inventory[i])
 			delete inventory[i];
-		}
+		i++;
 	}
-	// Delete items in floor
-	for (int i = 0; i < slots; ++i) {
-		if (floor[i]) {
-			delete floor[i];
-		}
-	}
+	std::cout << "Character " << name << " is destroyed." << std::endl;
 };
 
 Character::Character(const Character &copy) : name(copy.getName() + "_copy") {
 	int	i = 0;
 	while (i < slots) {
-		if (copy.inventory[i]) {
+		if (copy.inventory[i])
 			inventory[i] = copy.inventory[i]->clone();
-		}
-		if (copy.floor[i]) {
-			floor[i] = copy.floor[i]->clone();
-		}
+		else
+			inventory[i] = NULL;
 		i++;
 	}
 	std::cout << "A character named " << name << " was created from a copy of " << copy.name << std::endl;
 }
-
 
 std::string const &Character::getName() const {
 	return (name);
@@ -60,8 +51,13 @@ void Character::setName(const std::string &str) {
 	name = str;
 }
 
-Character &Character::operator=(Character const &src) {
+AMateria *Character::getMateriaFromInventory(int idx) {
+	if (idx < 0 || idx > slots )
+		return (NULL);
+	return (inventory[idx]);
+}
 
+Character &Character::operator=(Character const &src) {
 	if (this == &src)
 		return (*this);
 	int	i = 0;
@@ -85,9 +81,8 @@ void Character::equip(AMateria *m) {
 		std::cout << "Invalid AMateria. Cannot equip." << std::endl;
 		return ;
 	}
-	// find a available slot
 	while (i < slots) {
-		if (inventory[i] == NULL) {
+		if (!inventory[i]) {
 			inventory[i] = m;
 			std::cout << name << " equipped " << m->getType() << std::endl;
 			return ;
@@ -106,14 +101,7 @@ void Character::unequip(int idx) {
 		std::cout << name << " has nothing equipped." << std::endl;
 	}
 	else {
-		int i = 0;
-		while (floor[i] && i < slots) {
-			i++;
-		}
 		AMateria *a = (inventory[idx]);
-		// save the address in the floor
-		floor[i] = a;
-		// set the slot to null;
 		inventory[idx] = NULL;
 		std::cout << name << " unequipped " << a->getType() << " and left it on the floor." << std::endl;
 		return ;

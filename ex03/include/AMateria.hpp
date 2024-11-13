@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:50:04 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/11 15:15:52 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:57:13 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class AMateria
 		// public method
 		std::string const &getType() const;
 		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter &target);
+		virtual void use(ICharacter &target) = 0;
 
 };
 

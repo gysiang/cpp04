@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyong-si <gyong-si@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gyong-si <gyongsi@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:38:49 by gyong-si          #+#    #+#             */
-/*   Updated: 2024/11/12 17:48:14 by gyong-si         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:14:34 by gyong-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,21 @@ MateriaSource::MateriaSource(MateriaSource const &copy) {
 	while (i < slots) {
 		if (copy.inventory[i])
 			inventory[i] = copy.inventory[i]->clone();
+		i++;
 	}
+	std::cout << "Materia source was created from copy." << std::endl;
 }
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &src) {
+	if (this == &src)
+		return (*this);
 	int i = 0;
 	while (i < slots) {
 		if (inventory[i])
 			delete (inventory[i]);
 		if (src.inventory[i])
 			inventory[i] = src.inventory[i]->clone();
+		i++;
 	}
 	return (*this);
 }
@@ -61,6 +66,7 @@ void MateriaSource::learnMateria(AMateria* m) {
 		if (!inventory[i]) {
 			inventory[i] = m->clone();
 			std::cout << "Learn Materia: " << m->getType() << std::endl;
+			delete m;
 			return ;
 		}
 		i++;
@@ -69,7 +75,6 @@ void MateriaSource::learnMateria(AMateria* m) {
 }
 
 AMateria* MateriaSource::createMateria(std::string const &type) {
-	// loop through the slots looking for a match
 	int i = 0;
 	while (i < slots) {
 		if (inventory[i] && inventory[i]->getType() == type) {
